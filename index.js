@@ -44,11 +44,26 @@ mongoose
   })
   .then((response) => { 
    console.log("me cargué la zanahoria ", response);
-    return  mongoose.connection.close(MONGODB_URI)
+   return  mongoose.connection.close(MONGODB_URI)
   })
-  .then((response)=>{
-    console.log("connexion close")
-  })
+  
+  //*PRUEBA PARA COMPROBAR LA CONNECT
+ // .then((response)=>{
+   // console.log("connexion close")
+    // return Recipe.create({
+    //   title: "Prueba de connect",
+    //   level: "Easy Peasy",
+    //   ingridients: "tomatos with love",
+    //   cuisine: "heladera",
+    //   dishType: "main_course",
+    //   duration: 3,
+    //   creator: "Mi Abuela Ana",
+    // });
+
+  // }).then ((response)=>{
+  //   console.log(response)
+  //* })  
+  
 
   .catch((error) => {
     console.error("Error connecting to the database", error);
